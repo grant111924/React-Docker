@@ -1,0 +1,10 @@
+version: '3.8' # Docker version: 19.03.0+
+services:
+  dev:
+    image: node:12
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: npm run start
+    ports:
+      - 3001:3001  # Correspond to webpack dev server port
